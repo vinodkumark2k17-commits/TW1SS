@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070510">
+  <title>Galactic Food Express ✦</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background: #070510;
+      color: #f1f5f9;
+    }
+
+    .font-orbitron {
+      font-family: "Orbitron", sans-serif;
+    }
+
+    .space-bg {
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(124, 58, 237, .16), transparent 30%),
+        radial-gradient(circle at 85% 25%, rgba(6, 182, 212, .10), transparent 26%),
+        radial-gradient(rgba(255, 255, 255, .15) .7px, transparent .7px);
+
+      background-size: auto, auto, 34px 34px;
+    }
+
+    .glass {
+      background: rgba(15, 10, 29, .88);
+      backdrop-filter: blur(18px);
+    }
+
+    .card {
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(167, 139, 250, .65);
+      box-shadow: 0 16px 42px rgba(91, 33, 182, .17);
+    }
+
+    .card img {
+      transition: transform .5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.06);
+    }
+
+    .btn {
+      transition: transform .15s ease, filter .15s ease;
+    }
+
+    .btn:active {
+      transform: scale(.97);
+    }
+
+    .btn:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 2px solid #67e8f9;
+      outline-offset: 3px;
+    }
+
+    .pop {
+      animation: pop .32s ease both;
+    }
+
+    @keyframes pop {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(.985);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+      background: #4c1d95;
+      border-radius: 8px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen space-bg pb-24 lg:pb-8">
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 border-b border-violet-900/50 bg-[#070510]/90 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
+
+      <a href="#" id="brand-home" class="flex min-w-0 items-center gap-3">
+        <div class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-cyan-400 via-violet-600 to-pink-500 text-xl shadow-lg">
+          🌌
+        </div>
+
+        <div class="min-w-0">
+          <h1 class="font-orbitron truncate text-xs font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-cyan-300 to-white sm:text-base">
+            GALACTIC FOOD EXPRESS
+          </h1>
+
+          <p class="hidden text-[10px] tracking-[.18em] text-slate-500 sm:block">
+            INTERGALACTIC SUPPLY NETWORK
+          </p>
+        </div>
+      </a>
+
+      <div class="flex shrink-0 items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-950/30 px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-emerald-300 sm:text-xs">
+        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Sector 4 Online
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-3">
+
+    <!-- MENU SECTION -->
+    <section class="space-y-6 lg:col-span-2">
+
+      <!-- HERO -->
+      <div class="relative overflow-hidden rounded-3xl border border-violet-900/40 bg-gradient-to-br from-violet-950/70 via-[#100b21]/90 to-cyan-950/30 p-6 sm:p-9">
+
+        <div class="relative">
+
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-950/30 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.2em] text-cyan-300">
+            ✦ Fresh from the galaxy
+          </div>
+
+          <h2 class="font-orbitron max-w-2xl text-2xl font-black leading-tight sm:text-4xl">
+            YOUR NEXT MEAL IS
+            <span class="bg-gradient-to-r from-cyan-300 via-violet-300 to-pink-300 bg-clip-text text-transparent">
+              OUT OF THIS WORLD.
+            </span>
+          </h2>
+
+          <p class="mt-4 max-w-xl text-sm leading-6 text-slate-400">
+            Fuel your next adventure with cosmic cuisine delivered
+            across the universe. Pick your provisions and prepare for launch.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3 text-xs text-slate-400">
+            <span class="rounded-lg border border-white/10 bg-black/20 px-3 py-2">
+              🚀 Fast warp delivery
+            </span>
+
+            <span class="rounded-lg border border-white/10 bg-black/20 px-3 py-2">
+              🪐 Species-aware menu
+            </span>
+
+            <span class="rounded-lg border border-white/10 bg-black/20 px-3 py-2">
+              ✦ Made with stardust
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MENU HEADING -->
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+
+        <div>
+          <p class="mb-2 text-[10px] font-bold uppercase tracking-[.25em] text-violet-300">
+            Explore provisions
+          </p>
+
+          <h2 class="font-orbitron text-xl font-bold tracking-wide sm:text-2xl">
+            COSMIC MENU
+            <span class="text-cyan-300">SELECTION</span>
+          </h2>
+        </div>
+
+        <p id="result-count" class="text-xs text-slate-500">
+          6 provisions available
+        </p>
+
+      </div>
+
+      <!-- SEARCH, FILTERS AND SORTING -->
+      <div class="space-y-4 rounded-2xl border border-violet-900/30 bg-[#100b1e]/75 p-3 sm:p-4">
+
+        <div class="relative">
+          <label for="search-input" class="sr-only">Search menu</label>
+
+          <input
+            id="search-input"
+            type="search"
+            placeholder="⌕  Search cosmic cuisine..."
+            class="w-full rounded-xl border border-violet-900/40 bg-[#070510]/80 py-3 pl-4 pr-4 text-sm text-white placeholder:text-slate-600"
+          >
+        </div>
+
+        <div id="filter-container" class="flex flex-wrap gap-2">
+
+          <button type="button" data-category="all"
+            class="filter-btn btn rounded-xl bg-violet-600 px-3 py-2.5 text-xs font-bold text-white">
+            ✦ All Items
+          </button>
+
+          <button type="button" data-category="Both"
+            class="filter-btn btn rounded-xl border border-violet-900/40 bg-black/20 px-3 py-2.5 text-xs font-semibold text-slate-400">
+            🌍 Universal
+          </button>
+
+          <button type="button" data-category="Alien"
+            class="filter-btn btn rounded-xl border border-violet-900/40 bg-black/20 px-3 py-2.5 text-xs font-semibold text-slate-400">
+            👽 Aliens Only
+          </button>
+
+          <button type="button" data-category="Human"
+            class="filter-btn btn rounded-xl border border-violet-900/40 bg-black/20 px-3 py-2.5 text-xs font-semibold text-slate-400">
+            👨‍🚀 Humans Only
+          </button>
+
+        </div>
+
+        <div class="flex items-center justify-between gap-3">
+
+          <label for="sort-select" class="text-xs text-slate-500">
+            Sort provisions
+          </label>
+
+          <select id="sort-select" class="rounded-lg border border-violet-900/40 bg-[#070510] px-3 py-2 text-xs text-slate-300">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name: A–Z</option>
+          </select>
+
+        </div>
+      </div>
+
+      <!-- PRODUCT CARDS -->
+      <div id="menu-grid" class="grid grid-cols-1 gap-5 sm:grid-cols-2" aria-live="polite"></div>
+
+    </section>
+
+    <!-- SHOPPING CART -->
+    <aside id="cart-container-box"
+      class="glass h-fit rounded-3xl border border-violet-900/40 p-5 shadow-2xl lg:sticky lg:top-24 sm:p-6">
+
+      <div class="flex items-center justify-between border-b border-violet-900/40 pb-5">
+
+        <div>
+          <p class="mb-1 text-[10px] font-bold uppercase tracking-[.22em] text-cyan-300">
+            Your order
+          </p>
+
+          <h2 class="font-orbitron text-lg font-bold tracking-wider">
+            PAYLOAD POD
+          </h2>
+        </div>
+
+        <div class="grid h-11 w-11 place-items-center rounded-2xl border border-violet-800/40 bg-violet-950/40 text-xl">
+          🛸
+        </div>
+
+      </div>
+
+      <div class="mt-4 flex items-center justify-between text-xs">
+        <span class="text-slate-500">Payload ID</span>
+        <span class="font-mono text-violet-300">#GX-9042</span>
+      </div>
+
+      <div id="cart-items" class="scrollbar mt-4 max-h-72 space-y-3 overflow-y-auto pr-1"></div>
+
+      <button id="clear-cart-btn" type="button"
+        class="btn mt-3 hidden w-full rounded-lg border border-rose-900/40 px-3 py-2 text-xs font-semibold text-rose-300 hover:bg-rose-950/40">
+        Clear Payload
+      </button>
+
+      <!-- PRICE SUMMARY -->
+      <div class="mt-5 space-y-3 border-t border-violet-900/40 pt-5 text-sm">
+
+        <div class="flex justify-between text-slate-400">
+          <span>Provisions subtotal</span>
+          <span id="cart-subtotal" class="font-mono text-slate-200">₳0.00</span>
+        </div>
+
+        <div class="flex justify-between text-slate-400">
+          <span>Warp delivery</span>
+          <span id="delivery-fee" class="font-mono text-slate-200">₳0.00</span>
+        </div>
+
+        <div id="discount-row" class="hidden justify-between text-emerald-300">
+          <span>Launch discount (10%)</span>
+          <span id="discount-amount" class="font-mono">−₳0.00</span>
+        </div>
+
+        <div class="flex justify-between border-t border-violet-900/40 pt-4 font-bold">
+          <span>Total credits</span>
+          <span id="cart-total" class="font-mono text-lg text-cyan-300">₳0.00</span>
+        </div>
+
+        <p class="text-[10px] leading-5 text-slate-600">
+          Delivery costs ₳15. Orders of ₳100 or more receive 10% off provisions.
+        </p>
+
+      </div>
+
+      <button id="checkout-btn" type="button"
+        class="btn mt-5 w-full rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 px-4 py-4 font-orbitron text-xs font-bold tracking-[.15em] text-white shadow-lg hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40">
+        DISPATCH PAYLOAD 🚀
+      </button>
+
+      <!-- DELIVERY TRACKER -->
+      <div id="tracker-box" class="mt-4 hidden rounded-2xl border border-cyan-500/20 bg-[#070510] p-4">
+
+        <div class="flex items-center justify-between">
+          <p class="font-orbitron text-[10px] font-bold uppercase tracking-widest text-cyan-300">
+            Transit Diagnostics
+          </p>
+
+          <span id="progress-percent" class="font-mono text-xs text-slate-500">
+            0%
+          </span>
+        </div>
+
+        <p id="tracker-status" class="mt-3 text-xs leading-5 text-slate-300" role="status">
+          Preparing launch...
+        </p>
+
+        <div class="mt-3 h-2 overflow-hidden rounded-full bg-slate-900">
+          <div id="progress-bar" class="h-full w-0 rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-400 to-cyan-300 transition-all duration-700"></div>
+        </div>
+
+      </div>
+
+      <p class="mt-4 text-center text-[10px] leading-5 text-slate-600">
+        Demo checkout · No real payment is collected
+      </p>
+
+    </aside>
+
+  </main>
+
+  <!-- MOBILE CART BAR -->
+  <div class="glass fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between border-t border-violet-900/50 p-3.5 lg:hidden">
+
+    <div>
+      <p class="font-orbitron text-[9px] uppercase tracking-widest text-violet-300">
+        Payload Pod
+      </p>
+
+      <p id="mobile-cart-count" class="mt-1 text-xs font-bold text-white">
+        0 items · ₳0.00
+      </p>
+    </div>
+
+    <button id="mobile-view-cart" type="button"
+      class="btn rounded-xl bg-violet-600 px-5 py-3 text-xs font-bold text-white">
+      View Pod ↓
+    </button>
+
+  </div>
+
+  <!-- NOTIFICATION -->
+  <div id="toast"
+    class="fixed bottom-24 left-1/2 z-[70] hidden max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-xl border border-cyan-400/20 bg-[#151027] px-4 py-3 text-center text-xs font-semibold text-white shadow-2xl lg:bottom-6"
+    role="status" aria-live="polite">
+  </div>
+
+  <script>
+    "use strict";
+
+    const DELIVERY_FEE = 15;
+    const DISCOUNT_THRESHOLD = 100;
+
+    const menu = [
+      {
+        id: 1,
+        name: "Universal Synth-Burger",
+        category: "Both",
+        price: 45,
+        desc: "A legendary synthesized patty enjoyed by Earthlings and Centaurians alike.",
+        emoji: "🍔",
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=85"
+      },
+      {
+        id: 2,
+        name: "Solar-Flare Noodles",
+        category: "Both",
+        price: 50,
+        desc: "Fiery noodles infused with solar energy. Big flavour and interstellar heat.",
+        emoji: "🍜",
+        image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=85"
+      },
+      {
+        id: 3,
+        name: "Methane-Boiled Tentacles",
+        category: "Alien",
+        price: 75,
+        desc: "A deep-space delicacy prepared for methane-breathing lifeforms.",
+        emoji: "🦑",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=85"
+      },
+      {
+        id: 4,
+        name: "Crystalline Quartz Crunch",
+        category: "Alien",
+        price: 60,
+        desc: "Crunchy silicon-based shards seasoned with asteroid salt.",
+        emoji: "💎",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=85"
+      },
+      {
+        id: 5,
+        name: "Classic Earth Pepperoni Pizza",
+        category: "Human",
+        price: 40,
+        desc: "Traditional melted cheese, pepperoni and golden-baked dough.",
+        emoji: "🍕",
+        image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=85"
+      },
+      {
+        id: 6,
+        name: "Iced Cold-Brew Coffee",
+        category: "Human",
+        price: 25,
+        desc: "Smooth chilled coffee fuel for late-night missions and coding sessions.",
+        emoji: "🧋",
+        image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85"
+      }
+    ];
+
+    // Cart stores quantities by product ID.
+    let cart = {};
+    let activeCategory = "all";
+    let searchTerm = "";
+    let toastTimer;
+    let checkoutTimers = [];
+    let isCheckingOut = false;
+
+    const $ = id => document.getElementById(id);
+
+    const money = amount => "₳" + amount.toFixed(2);
+
+    const cartQuantity = () =>
+      Object.values(cart).reduce((sum, quantity) => sum + quantity, 0);
+
+    const subtotal = () =>
+      menu.reduce(
+        (sum, item) => sum + item.price * (cart[item.id] || 0),
+        0
+      );
+
+    const discount = () =>
+      subtotal() >= DISCOUNT_THRESHOLD
+        ? subtotal() * 0.10
+        : 0;
+
+    const total = () =>
+      subtotal() +
+      (cartQuantity() ? DELIVERY_FEE : 0) -
+      discount();
+
+    function safeText(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]);
+    }
+
+    // Notification system.
+    function showToast(message) {
+      const toast = $("toast");
+
+      toast.textContent = message;
+      toast.classList.remove("hidden");
+
+      clearTimeout(toastTimer);
+
+      toastTimer = setTimeout(() => {
+        toast.classList.add("hidden");
+      }, 2400);
+    }
+
+    // Render menu.
+    function renderMenu() {
+      const grid = $("menu-grid");
+      const sort = $("sort-select").value;
+
+      let items = menu.filter(item => {
+        const matchesCategory =
+          activeCategory === "all" ||
+          item.category === activeCategory;
+
+        const searchableText =
+          ${item.name} ${item.desc} ${item.category}.toLowerCase();
+
+        return matchesCategory &&
+          searchableText.includes(searchTerm.toLowerCase());
+      });
+
+      if (sort === "price-asc") {
+        items.sort((a, b) => a.price - b.price);
+      }
+
+      if (sort === "price-desc") {
+        items.sort((a, b) => b.price - a.price);
+      }
+
+      if (sort === "name") {
+        items.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      $("result-count").textContent =
+        ${items.length} ${items.length === 1 ? "provision" : "provisions"} found;
+
+      if (!items.length) {
+        grid.innerHTML = `
+          <div class="col-span-full rounded-2xl border border-dashed border-violet-900/50 p-10 text-center">
+            <div class="text-3xl">🔭</div>
+            <p class="mt-3 font-semibold text-slate-300">No provisions found</p>
+            <p class="mt-1 text-xs text-slate-500">Try a different search or category.</p>
+            <button id="reset-search" type="button" class="btn mt-4 rounded-lg bg-violet-600 px-4 py-2 text-xs font-bold">
+              Reset Filters
+            </button>
+          </div>
+        `;
+
+        $("reset-search").addEventListener("click", resetFilters);
+        return;
+      }
+
+      grid.innerHTML = items.map((item, index) => {
+        const categoryLabel =
+          item.category === "Both" ? "UNIVERSAL" :
+          item.category === "Alien" ? "ALIENS ONLY" :
+          "HUMANS ONLY";
+
+        const categoryColor =
+          item.category === "Alien"
+            ? "text-fuchsia-200 border-fuchsia-400/20 bg-fuchsia-950/80"
+            : item.category === "Human"
+              ? "text-cyan-200 border-cyan-400/20 bg-cyan-950/80"
+              : "text-violet-200 border-violet-400/20 bg-violet-950/80";
+
+        const quantity = cart[item.id] || 0;
+
+        return `
+          <article class="card pop flex flex-col overflow-hidden rounded-2xl border border-violet-900/35 bg-[#100b1e]/90"
+            style="animation-delay:${index * 45}ms">
+
+            <div class="relative h-48 overflow-hidden bg-slate-900">
+
+              <img
+                src="${item.image}"
+                alt="${safeText(item.name)}"
+                loading="lazy"
+                class="h-full w-full object-cover"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+              >
+
+              <div
+                style="display:none"
+                class="absolute inset-0 place-items-center bg-gradient-to-br from-violet-950 to-cyan-950 text-6xl">
+                ${item.emoji}
+              </div>
+
+              <div class="absolute inset-0 bg-gradient-to-t from-[#100b1e] via-transparent to-black/10"></div>
+
+              <span class="absolute left-3 top-3 rounded-lg border px-2.5 py-1 text-[9px] font-extrabold tracking-wider backdrop-blur-md ${categoryColor}">
+                ${categoryLabel}
+              </span>
+
+              ${quantity ? `
+                <span class="absolute right-3 top-3 rounded-full bg-cyan-300 px-2.5 py-1 text-[10px] font-extrabold text-slate-950">
+                  ${quantity} IN POD
+                </span>
+              ` : ""}
+
+            </div>
+
+            <div class=
